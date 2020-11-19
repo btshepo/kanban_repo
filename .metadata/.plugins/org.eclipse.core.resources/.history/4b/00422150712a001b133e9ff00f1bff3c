@@ -1,0 +1,21 @@
+<div class="page-container">
+  <div class="page-title">
+    <h1>Kanban Boards</h1>
+  </div>
+  <div>
+    <button mat-raised-button (click)="openDialogForNewKanban()">+ Create Kanban</button>
+  </div>
+  
+  <div class="main-card">
+    <mat-nav-list>
+	  <mat-list-item *ngFor="let kanban of kanbanList">
+	     <a matLine href="...">{{ link }}</a>
+	      <a routerLink="/kanbans/{{kanban.id}}"> 
+	        <p class="kanban-title">{{kanban.title}} &nbsp;&nbsp;&nbsp;&nbsp; Created : {{kanban.createdDate}}</p>
+	      </a>
+	      <button mat-raised-button (click)="removeKanbanById(kanban.id)">- Delete</button>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+</div>
+

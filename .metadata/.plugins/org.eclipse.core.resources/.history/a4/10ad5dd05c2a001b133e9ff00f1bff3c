@@ -1,0 +1,5 @@
+CREATE TABLE kanban (
+    id SERIAL PRIMARY KEY,
+    title TEXT,
+    created_date TIMESTAMP DEFAULT NOW()
+);
